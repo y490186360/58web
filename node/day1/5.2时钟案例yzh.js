@@ -29,14 +29,14 @@ function resolveCSS(htmlStr) {
   const targetCss = path.join(__dirname, './clock/index.css')
   fs.writeFile(targetCss, newCSS, (err) => {
     if (err) return console.log('写入 CSS 样式失败！' + err.message)
-    console.log('写入样式成功！')
+    console.log('写入css成功！')
   })
 }
 function resolveJS(htmlStr) {
   const newJS = regScript.exec(htmlStr)[1]
   const targetJs = path.join(__dirname, './clock/index.js')
   fs.writeFile(targetJs, newJS, (err) => {
-    if (err) return console.log('写入 javascript 脚本失败！' + err.message)
+    if (err) return console.log('写入 js 脚本失败！' + err.message)
     console.log('写入JS脚本成功！')
   })
 }
