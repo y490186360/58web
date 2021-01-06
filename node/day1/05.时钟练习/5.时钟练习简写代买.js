@@ -9,9 +9,10 @@ const targetHtml = path.join(__dirname, '../index.html')
 fs.readFile(targetHtml, 'utf8', (err, dataStr) => {
     if (err) return console.log('读取文件失败！' + err.message)
     console.log('读取文件成功！')
+    // __dirname 表示当前文件所处在的目录
     const targetCss = path.join(__dirname, '/res/rod.css')
     const targetJs = path.join(__dirname, '/res/rod.js')
-    // 建华封装代码 传递多个参数 路径写在调用函数里
+    // 封装代码 传递多个参数 路径写在调用函数里
     rea(dataStr, targetCss, regStyle, 'CSS')
     rea(dataStr, targetJs, regScript, 'JS')
     reaHtml(dataStr)

@@ -5,6 +5,7 @@ const regStyle = /<style>([\s\S]*)<\/style>/
 const regScript = /<script>([\s\S]*)<\/script>/
 
 const targetHtml = path.join(__dirname, '../index.html')
+// dataStr fs.readFile()读取特有的 代表读取文件的所有的内容
 fs.readFile(targetHtml, 'utf8', (err, dataStr) => {
     if (err) return console.log('读取文件失败！' + err.message)
     console.log('读取文件成功！')
