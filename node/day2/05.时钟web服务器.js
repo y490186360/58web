@@ -1,7 +1,7 @@
 // 导入模块
-const http = require('http')
 const fs = require('fs')
 const path = require('path')
+const http = require('http')
 // 创建web服务器
 const server = http.createServer()
 // 监听客户端请求事件
